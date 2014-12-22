@@ -1,0 +1,6 @@
+## Go deps, managed by https://github.com/pote/gpm
+## These are a few of my favorite things.
+
+## prod
+github.com/jessevdk/go-flags 1679536dcc895411a9f5848d9a0250be7856448c
+github.com/Sirupsen/logrus   51fe59aca108dc5680109e7b2051cbdcfa5a253c
