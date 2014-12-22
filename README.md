@@ -14,7 +14,7 @@ did it last time), so I wrote this.
 
 ## supported functions
 
-* `env` -- retrieves an environment variable
+* `env "KEY" ["default"]` -- retrieves an environment variable named `KEY`, with an optional default
 * `split` -- splits a string on a substring; [`strings#Split`](http://golang.org/pkg/strings/#Split)
 
 ## unsupported functions (future?)

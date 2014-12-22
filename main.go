@@ -13,6 +13,18 @@ import (
 
 var version string = "undef"
 
+// return the value of an environment variable. if an extra argument is
+// provided, it will be used as the default if there's no value for 'key'.
+func getenv(key string, args ...string) string {
+    val := os.Getenv(key)
+    
+    if val == "" && len(args) > 0 {
+        val = args[0]
+    }
+    
+    return val
+}
+
 type Options struct {
     Debug  bool   `          long:"debug"  description:"enable debug"`
     Input  string `short:"i" long:"input"  description:"input file"  default:"-"`
@@ -62,7 +74,7 @@ func main() {
     
     // map of functions to be provided to the template
     funcs := template.FuncMap{
-        "env": os.Getenv,
+        "env": getenv,
         "split": strings.Split,
     }
     
