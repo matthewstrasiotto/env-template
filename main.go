@@ -79,7 +79,7 @@ func main() {
     }
     
     // parse the template, with provided functions
-    tmpl, err := template.New("env").Funcs(funcs).Parse(string(inBuf.Bytes()))
+    tmpl, err := template.New(opts.Input).Funcs(funcs).Parse(string(inBuf.Bytes()))
     checkError("unable to parse template", err)
     
     // execute the template
